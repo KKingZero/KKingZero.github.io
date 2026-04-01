@@ -366,6 +366,20 @@ a:hover { color: var(--accent-hover); }
   font-size: 0.85rem;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 640px) {
   .hero h1 { font-size: 1.75rem; }
