@@ -338,6 +338,17 @@ a:hover { color: var(--accent-hover); }
   border-top: 1px solid var(--border);
 }
 
+/* ---- SKILLS ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
 /* ---- ABOUT ---- */
 .about-content {
   font-size: 1.05rem;
