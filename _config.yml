@@ -1,0 +1,20 @@
+title: KKingZero
+description: Developer blog & portfolio
+author: KKingZero
+url: "https://kkingzero.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

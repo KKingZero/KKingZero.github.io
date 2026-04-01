@@ -1,0 +1,51 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <h1>Hey, I'm <span class="accent">KKingZero</span></h1>
+  <p>Developer, tinkerer, and occasional writer. I build things and write about what I learn along the way.</p>
+  <div class="hero-links">
+    <a href="{{ '/blog' | relative_url }}" class="btn btn-primary">Read the blog</a>
+    <a href="https://github.com/KKingZero" class="btn btn-outline">GitHub</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="post-list">
+    {% for post in site.posts limit:3 %}
+    <div class="post-card">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <div class="post-meta">
+        <time>{{ post.date | date: "%b %d, %Y" }}</time>
+        {% if post.tags %}
+        <div class="post-tags">
+          {% for tag in post.tags limit:3 %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Zypheron</h3>
+      <p>AI-powered desktop application built with Electron, integrating multiple AI providers.</p>
+      <div class="project-tech">
+        <span class="tech-tag">Electron</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">AI</span>
+      </div>
+    </div>
+    <!-- Add more project cards here -->
+  </div>
+</section>
